@@ -50,3 +50,8 @@ def update(request, user_id):
 
         return render(request, 'criar.html', context=context)
 
+def delete(request, user_id):
+    user = User.objects.get(pk=user_id)
+    user.delete()
+
+    return redirect(index)
