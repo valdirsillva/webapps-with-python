@@ -1,0 +1,36 @@
+Criar ambiente virtual ( python -m venv ./env )
+Ativar ambiente virtual: (env\Scripts\activate )
+Instalação Flask: ( pip install flask )
+Gardar as dependencias: ( pip freeze > requirements.txt )
+
+------------------------------------------------------------
+
+Criamos arquivo do server (app.py)
+Criamos uma rota get('/')
+Digitar o comando ( set FASK_APP=app.py )
+Digitar o comando ( flask run ) para iniciar a aplicação
+
+-------------------------------------------------------------
+
+Criar um documento HTML ( usar como template )
+Renderizar template 
+Templates ou rotas dinâmicas
+
+
+-------------------------------------------------------------
+
+Instalar uma dependencia ( pip install flask-wtf)
+Import de class de formulario
+Renderizado o formulario 
+Devolveu os dados recebidos pelo formulario no template 
+
+-------------------------------------------------------------
+
+Instalação do pacote ( pip install Flask-Migrate )
+Instalação do pacote ( pip install flask_sqlalchemy )
+
+-------------------------------------------------------------
+
+Inicializar o banco de dados # flask db init
+Gerar as migrações # flask db migrate
+# flask db upgrade
