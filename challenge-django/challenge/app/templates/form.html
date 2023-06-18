@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container d-flex h-100 justify-content-center align-items-center">
+    <form method="post" autocomplete="off">
+        {% csrf_token %}
+        <h4 class="ml-10 mb-4">Digite os coeficiente da equação do segundo grau.</h4>
+        {% for field in form %}
+        <div class="form-group row mt-2">
+            <label class="col-sm-2 col-form-label" for="{{ field.id_form_label }}">
+                {{ field.label }}
+            </label>
+            <div class="col-md-10">
+                {{ field }}
+            </div>
+        </div>
+        {% endfor %}
+
+
+        <div class="form-group mt-4">
+            <div class="col-md-6 offset-2">
+                <button type="submit" class="btn btn-primary btn-md col-md-6">Calcular</button>
+            </div>
+
+            {% if r1 and r2 %}
+            <div class="col-md-6 offset-2 mt-5">
+                Duas raizes: {{r1}} e {{r2}}
+            </div>
+            {% else %}
+            <div class="col-md-6 offset-2 mt-5">
+                Existe apenas uma raiz: {{r1}}
+            </div>
+            {% endif %}
+        </div>
+    </form>
+</div>
+{% endblock %}
