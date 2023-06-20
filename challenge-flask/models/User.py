@@ -12,12 +12,12 @@ class User(db.Model):
     address = db.Column(db.String(45))
     cpf = db.Column(db.String(11))
 
-    def serialize():
+    def serialize(self):
         return {
             'id': self.id,
             'username': self.username,
             'name': self.name,
             'phone_number': self.phone_number,
             'address': self.address,
-            'cpf': self.cpf,
+            'cpf': self.cpf
         }
